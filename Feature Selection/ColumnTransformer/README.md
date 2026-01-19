@@ -16,15 +16,15 @@ Advantages of using ColumnTransformer vs. Manual Transformation:
 ## Manual Transformation:
 
 #### Verbose and Error-Prone: Requires separate code for each transformation and careful manual tracking of column names and indices. This increases the likelihood of mistakes (e.g., applying the wrong transformer to a column, forgetting to transform the test set identically to the train set).
-    . Difficult to Maintain: As the number of features and transformations grows, the code becomes harder to read, debug, and modify.
-    No Automatic Column Tracking: Requires manual dropping and concatenating of columns, which can be cumbersome.
-    Not Pipeline-Friendly: Integrating manual steps into a scikit-learn Pipeline is challenging and often leads to less elegant code.
+#### Difficult to Maintain: As the number of features and transformations grows, the code becomes harder to read, debug, and modify.
+#### No Automatic Column Tracking: Requires manual dropping and concatenating of columns, which can be cumbersome.
+#### Not Pipeline-Friendly: Integrating manual steps into a scikit-learn Pipeline is challenging and often leads to less elegant code.
 
 ## ColumnTransformer:
 
-    Concise and Readable Code: Consolidates all preprocessing steps into a single, clean object, making the code much easier to understand and manage.
-    Reduced Errors and Enhanced Consistency: Ensures that the correct transformers are applied to the specified columns. It automatically handles the transformation logic for both training (fit_transform) and testing (transform) datasets, guaranteeing consistency.
-    Automatic Column Selection: Simplifies the process of selecting which columns to apply which transformations to, without needing to manually drop or reorder columns.
-    Seamless Integration with Pipelines: ColumnTransformer is designed to be easily incorporated into scikit-learn Pipeline objects, enabling a complete, end-to-end machine learning workflow (preprocessing + model) that is robust and reproducible.
-    Improved Maintainability: Changes to preprocessing logic can be made in one central place, improving code maintainability.
-    Flexibility: Allows different preprocessing techniques (e.g., imputation, scaling, encoding) to be applied to different subsets of columns simultaneously.
+#### Concise and Readable Code: Consolidates all preprocessing steps into a single, clean object, making the code much easier to understand and manage.
+#### Reduced Errors and Enhanced Consistency: Ensures that the correct transformers are applied to the specified columns. It automatically handles the transformation logic for both training (fit_transform) and testing (transform) datasets, guaranteeing consistency.
+#### Automatic Column Selection: Simplifies the process of selecting which columns to apply which transformations to, without needing to manually drop or reorder columns.
+#### Seamless Integration with Pipelines: ColumnTransformer is designed to be easily incorporated into scikit-learn Pipeline objects, enabling a complete, end-to-end machine learning workflow (preprocessing + model) that is robust and reproducible.
+#### Improved Maintainability: Changes to preprocessing logic can be made in one central place, improving code maintainability.
+#### Flexibility: Allows different preprocessing techniques (e.g., imputation, scaling, encoding) to be applied to different subsets of columns simultaneously.
