@@ -3,14 +3,14 @@
 This notebook provides a practical demonstration of crucial data preprocessing techniques for machine learning. It covers handling missing values, encoding categorical features, and preparing data for model training. The notebook specifically highlights two approaches: a manual, step-by-step transformation process and a more efficient, consolidated approach using scikit-learn's ColumnTransformer.
 What you can learn from this notebook:
 
-    Data Loading and Initial Exploration: How to load data into a Pandas DataFrame and perform basic checks like viewing samples and identifying missing values (df.sample(), df.isnull().sum()).
-    Train-Test Split: The importance of splitting your dataset into training and testing sets (X_train, X_test, y_train, y_test) to evaluate model performance accurately and prevent data leakage.
-    Imputation of Missing Values: How to handle missing numerical values (e.g., in the 'fever' column) using SimpleImputer.
-    Categorical Feature Encoding: Techniques for converting categorical data into a numerical format that machine learning models can understand:
-        Ordinal Encoding: For features with an inherent order (e.g., 'cough' with 'Mild', 'Strong').
-        One-Hot Encoding: For nominal features without an order (e.g., 'gender', 'city').
-    Manual Feature Engineering: The process of individually applying transformers to different columns and then concatenating the results to form a preprocessed dataset.
-    Introduction to ColumnTransformer: A powerful tool from scikit-learn that allows you to apply different transformers to different columns of your dataset in a single, coherent step.
+Data Loading and Initial Exploration: How to load data into a Pandas DataFrame and perform basic checks like viewing samples and identifying missing values (df.sample(), df.isnull().sum()).
+Train-Test Split: The importance of splitting your dataset into training and testing sets (X_train, X_test, y_train, y_test) to evaluate model performance accurately and prevent data leakage.
+Imputation of Missing Values: How to handle missing numerical values (e.g., in the 'fever' column) using SimpleImputer.
+Categorical Feature Encoding: Techniques for converting categorical data into a numerical format that machine learning models can understand:
+    Ordinal Encoding: For features with an inherent order (e.g., 'cough' with 'Mild', 'Strong').
+    One-Hot Encoding: For nominal features without an order (e.g., 'gender', 'city').
+Manual Feature Engineering: The process of individually applying transformers to different columns and then concatenating the results to form a preprocessed dataset.
+Introduction to ColumnTransformer: A powerful tool from scikit-learn that allows you to apply different transformers to different columns of your dataset in a single, coherent step.
 
 Advantages of using ColumnTransformer vs. Manual Transformation:
 ## Manual Transformation:
