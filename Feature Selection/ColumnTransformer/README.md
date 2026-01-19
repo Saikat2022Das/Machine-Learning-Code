@@ -15,8 +15,8 @@ What you can learn from this notebook:
 Advantages of using ColumnTransformer vs. Manual Transformation:
 ## Manual Transformation:
 
-    Verbose and Error-Prone: Requires separate code for each transformation and careful manual tracking of column names and indices. This increases the likelihood of mistakes (e.g., applying the wrong transformer to a column, forgetting to transform the test set identically to the train set).
-    Difficult to Maintain: As the number of features and transformations grows, the code becomes harder to read, debug, and modify.
+#### Verbose and Error-Prone: Requires separate code for each transformation and careful manual tracking of column names and indices. This increases the likelihood of mistakes (e.g., applying the wrong transformer to a column, forgetting to transform the test set identically to the train set).
+    . Difficult to Maintain: As the number of features and transformations grows, the code becomes harder to read, debug, and modify.
     No Automatic Column Tracking: Requires manual dropping and concatenating of columns, which can be cumbersome.
     Not Pipeline-Friendly: Integrating manual steps into a scikit-learn Pipeline is challenging and often leads to less elegant code.
 
