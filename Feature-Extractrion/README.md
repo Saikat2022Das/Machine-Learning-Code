@@ -1,0 +1,15 @@
+## Feature Extraction:
+  - Like you have N - Dimension data but you don't know what are the features are important so that time we can use **Feature Extraction**.
+      - **PCA(Principle Component Analysis)**
+        - 1st: Normalize the features, mean shift(from sklearn.preprocessing import StandardScaler)
+        - 2nd: Call PCA:
+            - from sklearn.decomposition import PCA
+            - pca = PCA(n_componenets=None)
+            - X_train_normal = pca.fit_transform(X_train, y_train)
+                - Calculate Eigen Values, Covariance Metric.
+                - Make transform data.
+            - Find how many eigenvalues give more than 90% variance contribution.
+                - pca.explained_variance_ratio_
+                - Cumalative Sum: np.cumsum(pca.explained_variance_ratio_)
+                - Make a Plot: import matplotlib.pyplot as plt
+                            - plt.plot(np.cumsum(pca.explained_variance_ratio_)
