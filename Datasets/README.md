@@ -8,7 +8,7 @@
       - Here, **df.columns**, then you can see id, Unnamed 32, these two are dropped. How **df.drop(columns=['id', 'Unnamed 32'], inplace=True)**
    
   - ### Linear Dataset:
-      - ```python
+    ```python
       from sklearn.datasets import make_regression
       
       X, y = make_regression(
