@@ -9,12 +9,12 @@
    
   - Linear Dataset:
       - from sklearn.datasets import make_regression
-      - X, y = make_regression(
-      -         n_samples = 100 # Number of Rows.
-      -         n_features = 10 # Num of Columns
-      -         n_informativ = 3 # 3 Important columns here.
-      -         n_targets = 1 # Output Column
-      -         noise = 0.2,
-      -         random_state = 42
-      -     )
+       X, y = make_regression(
+               n_samples = 100 # Number of Rows.
+               n_features = 10 # Num of Columns
+               n_informativ = 3 # 3 Important columns here.
+               n_targets = 1 # Output Column
+               noise = 0.2,
+               random_state = 42
+           )
      
