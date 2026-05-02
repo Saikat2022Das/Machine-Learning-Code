@@ -20,5 +20,24 @@
           random_state=42
       )
       ```
-    <img width="1350" height="766" alt="Image" src="https://github.com/user-attachments/assets/e5da9efa-cdb8-442f-bd82-90b8de99e155" />
+  - ### Linear Classification Dataset:
+    ```python
+      from sklearn.datasets import make_classification
+
+      X, y = make_classification(
+          n_samples = 100      # 100 rows.
+          n_features = 3       # 3 columns.
+          n_informative = 2    # Among 3 columns, only 2 are importatnt for finding classes, target.
+          n_classes = 2        # Binary classification data like yes/no.
+          random_state = 41    # Make reproducibility.
+          n_clusters_per_class = 1    # Each class will have 1 cluster of data points in feature space.
+          hypercube = True/False  # When True, cluster centers are placed at the vertices of a hypercube. Setting it to False places cluster centers randomly in feature space, making the distribution less structured.
+          class_sep = 10  # Controls the separation between classes.
+    )
+    ```
+
+
+    #### Hypercube Comparison
+    ![hypercube comparison](<img width="1350" height="766" alt="Image" src="https://github.com/user-attachments/assets/e5da9efa-cdb8-442f-bd82-90b8de99e155" />)
+    
      
