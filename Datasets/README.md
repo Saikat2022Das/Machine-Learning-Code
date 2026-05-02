@@ -20,4 +20,5 @@
           random_state=42
       )
       ```
+    <img width="1350" height="766" alt="Image" src="https://github.com/user-attachments/assets/e5da9efa-cdb8-442f-bd82-90b8de99e155" />
      
