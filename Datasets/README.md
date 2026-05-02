@@ -38,6 +38,44 @@
 
 
     #### Hypercube Comparison
-    ![hypercube comparison](<img width="1350" height="766" alt="Image" src="https://github.com/user-attachments/assets/e5da9efa-cdb8-442f-bd82-90b8de99e155" />)
+    ![hypercube comparison]
+    <img width="1350" height="766" alt="Image" src="https://github.com/user-attachments/assets/e5da9efa-cdb8-442f-bd82-90b8de99e155" />
+
+    #### Basic Example — 4 Classes
+
+      ```python
+      from sklearn.datasets import make_classification
+      
+      X, y = make_classification(
+          n_samples=200,
+          n_features=5,
+          n_classes=4,          # 4 classes
+          n_informative=4,      # must be >= n_classes - 1
+          n_clusters_per_class=1,
+          random_state=42
+      )
+      ```
+      
+    #### The Rules When Increasing `n_classes`
+      
+    #### Rule 1 — `n_informative` must be enough
+      
+      ```python
+      n_informative >= n_classes - 1
+      ```
+      
+      So if `n_classes=4`, you need at least `n_informative=3`.
+      
+    #### Rule 2 — `n_informative` must be ≤ `n_features`
+      
+      ```python
+      n_informative <= n_features
+      ```
+      
+    #### Rule 3 — Total features must add up correctly
+      
+      ```python
+      n_informative + n_redundant + n_repeated <= n_features
+      ```
     
      
