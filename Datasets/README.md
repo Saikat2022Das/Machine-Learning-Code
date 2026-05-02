@@ -77,5 +77,55 @@
       ```python
       n_informative + n_redundant + n_repeated <= n_features
       ```
+
+## Steps to Get a Direct CSV Link from GitHub
+
+---
+
+### Step 1 — Upload your CSV to GitHub
+1. Go to your repository on GitHub
+2. Click **Add file** → **Upload files**
+3. Upload your `.csv` file and click **Commit changes**
+
+---
+
+### Step 2 — Open the CSV file
+Click on the CSV file in your repository to open it
+
+---
+
+### Step 3 — Click "Raw" button
+You will see a **Raw** button at the top right of the file viewer — click it
+
+```
+https://raw.githubusercontent.com/username/repo-name/main/filename.csv
+```
+
+> This is the direct link you need. The key is `raw.githubusercontent.com` — not the normal GitHub URL.
+
+---
+
+### ❌ Wrong URL (normal GitHub page)
+```
+https://github.com/username/repo-name/blob/main/filename.csv
+```
+
+### ✅ Correct URL (raw link)
+```
+https://raw.githubusercontent.com/username/repo-name/main/filename.csv
+```
+
+---
+
+### Step 4 — Use it in pandas
+
+```python
+import pandas as pd
+
+url = "https://raw.githubusercontent.com/username/repo-name/main/filename.csv"
+df = pd.read_csv(url)
+
+print(df.head())
+```
     
      
